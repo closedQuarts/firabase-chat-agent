@@ -1,4 +1,3 @@
-
 # Firebase Chat Agent
 
 This repository contains a Firebase Cloud Function named `processMessage` that listens to new user messages from Firestore, uses OpenAI to detect intent, and calls corresponding API routes through an API Gateway.
@@ -37,3 +36,12 @@ API Gateway: ocelot-gateway
 Name: Efe Demirtaş  
 Course: SE4458 Software Architecture (Spring 2025)  
 Project: AI Chat Agent (Function)
+
+## Challenges Encountered
+
+- Coordinating communication between the React frontend, Firebase functions, and the Ocelot API Gateway required precise endpoint and method alignment.
+- Managing CORS and authorization headers when calling the gateway from cloud functions.
+- Parsing natural language reliably using OpenAI and designing consistent JSON outputs for varying user intents.
+- Handling asynchronous behavior between Firestore message writes and delayed function triggers.
+- Configuring Firebase project permissions to allow the frontend to write and read from Firestore.
+- Debugging unexpected 401 and 404 errors from the gateway during early integration.
